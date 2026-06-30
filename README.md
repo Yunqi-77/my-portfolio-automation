@@ -1,67 +1,75 @@
-# Portfolio Website Automation Testing
+# 🚀 My Portfolio Automation Testing
 
-This repository contains the automated end-to-end (E2E) test suite for my personal portfolio website. The automation framework is built using **Playwright** and **TypeScript**, following best practices to demonstrate modern web UI test automation skills.
+An end-to-end (E2E) test automation framework built with **Playwright** and **TypeScript** to validate the functionality of my personal portfolio website.
 
-## Application Under Test
+## 🌐 Application Under Test
 
-**Portfolio Website:** https://yunqi-77.github.io/my-portfolio/index.html
+**Portfolio Website**
 
-**Source Repository:** https://github.com/Yunqi-77/my-portfolio
+https://yunqi-77.github.io/my-portfolio/index.html
+
+**Portfolio Source Code**
+
+https://github.com/Yunqi-77/my-portfolio
 
 ---
 
-## Tech Stack
+# ✨ Features
+
+* End-to-End web UI testing with Playwright
+* TypeScript-based automation framework
+* Page Object Model (POM) architecture
+* Reusable fixtures for cleaner test code
+* HTML test reports
+* Headed and headless execution
+* GitHub Actions CI workflow
+* Easy-to-maintain project structure
+
+---
+
+# 🛠 Tech Stack
 
 * Playwright
 * TypeScript
 * Node.js
+* GitHub Actions
 
 ---
 
-## Test Coverage
-
-The current automation suite covers the following areas of the website:
-
-### End-to-End (E2E)
-
-* User navigation through the website
-* Verification of core user journeys
-* Validation of page transitions and content rendering
-
-### Homepage
-
-* Homepage loads successfully
-* Hero section is displayed
-* Navigation menu is accessible
-* Essential page elements are visible
-* External links and navigation function correctly
-
-### Projects Page
-
-* Projects section is accessible
-* Project cards are displayed correctly
-* Project information is visible
-* Project links navigate to the expected destinations
-
-### About Me Page
-
-* About Me section is displayed
-* Personal information and content are visible
-* Skills and related information are rendered correctly
-* Navigation to and from the page works as expected
-
----
-
-## Project Structure
+# 📂 Project Structure
 
 ```text
-.
-├── tests/
-│   ├── e2e.spec.ts
-│   ├── homepage.spec.ts
-│   ├── projects.spec.ts
-│   └── aboutme.spec.ts
+my-portfolio-automation/
+│
+├── .github/
+│   └── workflows/
+│       └── playwright.yml
+│
+├── docs/
+│   └── Test Cases for My Portfolio.xlsx
+│
 ├── pages/
+│   ├── base/
+│   │   ├── base.page.ts
+│   │   └── fixtures.ts
+│   │
+│   ├── homepage/
+│   │   └── homepage.page.ts
+│   │
+│   ├── about/
+│   │   └── about.page.ts
+│   │
+│   └── project/
+│       ├── projects.page.ts
+│       └── projectDetail.page.ts
+│
+├── tests/
+│   ├── homepage.spec.ts
+│   ├── about.spec.ts
+│   ├── projects.spec.ts
+│   ├── e2e.spec.ts
+│   └── advanced.spec.ts
+│
 ├── playwright.config.ts
 ├── package.json
 └── README.md
@@ -69,58 +77,143 @@ The current automation suite covers the following areas of the website:
 
 ---
 
-## Getting Started
+# 🧪 Test Coverage
 
-### Install dependencies
+## Homepage
+
+* Verify homepage loads successfully
+* Verify hero section is visible
+* Verify navigation menu
+* Verify page content is displayed correctly
+
+## About Page
+
+* Navigate to the About page
+* Verify personal information
+* Verify skills and technologies section
+* Validate page content
+
+## Projects Page
+
+* Verify Projects page opens successfully
+* Verify project cards are displayed
+* Verify project details
+* Validate project navigation
+
+## End-to-End Scenarios
+
+* Complete user navigation across the portfolio
+* Verify links between pages
+* Validate overall user journey
+
+---
+
+# 🏗 Framework Design
+
+This project follows the **Page Object Model (POM)** design pattern to improve maintainability and scalability.
+
+Each page contains its own:
+
+* Locators
+* Page actions
+* Assertions
+* Navigation methods
+
+Benefits include:
+
+* Cleaner test files
+* Better code reuse
+* Easier maintenance
+* Reduced duplication
+
+---
+
+# 📦 Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/Yunqi-77/my-portfolio-automation.git
+```
+
+Install dependencies:
 
 ```bash
 npm install
 ```
 
-### Run all tests
+Install Playwright browsers:
 
 ```bash
-npx playwright test
-```
-
-### Run tests in headed mode
-
-```bash
-npx playwright test --headed
-```
-
-### View the HTML report
-
-```bash
-npx playwright show-report
+npx playwright install
 ```
 
 ---
 
-## Objectives
+# ▶️ Running Tests
 
-This project demonstrates:
+Run all tests
 
-* End-to-end web automation using Playwright
-* Test organization and maintainable test structure
-* Reliable UI validation for a modern web application
-* Automation skills applicable to real-world web testing projects
+```bash
+npm test
+```
 
----
+Run in headed mode
 
-## Future Enhancements
+```bash
+npm run test:headed
+```
 
-Planned improvements include:
+Run Playwright UI Mode
 
-* Cross-browser execution
-* Mobile viewport testing
-* Visual regression testing
-* Accessibility testing
-* CI/CD integration with GitHub Actions
-* Screenshot and video capture on test failure
+```bash
+npm run test:ui
+```
 
 ---
 
-## Author
+# 📊 Test Report
 
-Developed by **Yunqi** as part of my QA Automation portfolio to showcase practical experience in Playwright-based web automation testing.
+After execution, open the HTML report:
+
+```bash
+npm run report
+```
+
+---
+
+# ⚙ Continuous Integration
+
+The project includes a **GitHub Actions** workflow that can automatically execute the Playwright test suite on every push or pull request, helping ensure code quality through continuous integration.
+
+---
+
+# 📄 Test Documentation
+
+Detailed manual test cases are available in:
+
+```text
+docs/
+└── Test Cases for My Portfolio.xlsx
+```
+
+---
+
+# 🎯 Learning Objectives
+
+This project demonstrates my ability to:
+
+* Build a Playwright automation framework from scratch
+* Implement the Page Object Model
+* Write maintainable and reusable automation code
+* Organize scalable test suites
+* Configure automated test execution with GitHub Actions
+* Generate and analyze Playwright HTML reports
+
+---
+
+# 👨‍💻 Author
+
+**Yunqi**
+
+QA Automation Portfolio Project built with Playwright and TypeScript to showcase practical end-to-end web automation testing skills.
