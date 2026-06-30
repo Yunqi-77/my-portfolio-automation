@@ -1,5 +1,7 @@
 # 🚀 My Portfolio Automation Testing
 
+[![Playwright Tests](https://github.com/Yunqi-77/my-portfolio-automation/actions/workflows/playwright.yml/badge.svg)](https://github.com/Yunqi-77/my-portfolio-automation/actions/workflows/playwright.yml)
+
 An end-to-end (E2E) test automation framework built with **Playwright** and **TypeScript** to validate the functionality of my personal portfolio website.
 
 ## 🌐 Application Under Test
